@@ -1,10 +1,13 @@
+import Button from 'react-bootstrap/Button';
+ 
 function Navigation() {
   return (
-    <nav className="navigation">
-      <a href="#sobre">Sobre</a>
-      <a href="#serviços">Serviços</a>
-      <a href="#resultados">Resultados</a>
-      <a href="#contato">Contato</a>
+    <nav className="submenu">
+      <Button variant="success">Menu</Button>
+      <Button variant="success">Camisa</Button>
+      <Button variant="success">Jogos</Button>
+      <Button variant="success">Action Figures</Button>
+      <Button variant="success">Mangas</Button>
     </nav>
   );
 }

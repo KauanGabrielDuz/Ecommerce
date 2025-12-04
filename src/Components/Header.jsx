@@ -1,38 +1,19 @@
-// src/Components/Header.jsx
-import { useAuth } from "../context/AuthContext";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const Header = () => {
-  const { user, loginWithGoogle, loginWithMicrosoft, logout } = useAuth();
-
+export default function Header() {
   return (
-    <header className="header">
-      <h1>Prof Karen Carvalho</h1>
-      <p>Experiências de aprendizagem & desenvolvimento web</p>
+    <Navbar className="navbar-custom" expand="lg" variant="dark">
+      <Container>
+        <Navbar.Brand>MERCADO EMPÓRIO RENASCER</Navbar.Brand>
 
-      <div style={{ marginLeft: "auto" }}>
-        {user ? (
-          <>
-            <span style={{ marginRight: "1rem" }}>
-              Olá, {user.displayName || user.email}
-            </span>
-            <button onClick={logout}>Sair</button>
-          </>
-        ) : (
-          <>
-            <button onClick={loginWithGoogle}>
-              Entrar com Google
-            </button>
-            <button
-              onClick={loginWithMicrosoft}
-              style={{ marginLeft: "0.5rem" }}
-            >
-              Entrar com Microsoft
-            </button>
-          </>
-        )}
-      </div>
-    </header>
+        <Nav className="ms-auto">
+          <Nav.Link as={Link} to="/">Home</Nav.Link>
+          <Nav.Link as={Link} to="/ofertas">Ofertas</Nav.Link>
+          <Nav.Link as={Link} to="/descontos">Descontos</Nav.Link>
+          <Nav.Link as={Link} to="/carrinho">Carrinho 🛒</Nav.Link>
+        </Nav>
+      </Container>
+    </Navbar>
   );
-};
-
-export default Header;
+}

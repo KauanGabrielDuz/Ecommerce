@@ -1,50 +1,111 @@
-:root {
-  --color-primary: #003366;
-  --color-accent: #0077cc;
-  --color-highlight: #f46a6a;
-  --color-text: #333333;
-  --color-bg: #ffffff;
-  --font-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* === GLOBAL === */
 body {
-  margin: 0;
-  font-family: var(--font-base);
-  color: var(--color-text);
-  background-color: var(--color-bg);
-  line-height: 1.6;
+  background: #0a0a0a;
+  color: #f1f3f5;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
-/* Exemplo de estilos para header/navigation/hero etc */
-.header {
-  background-color: var(--color-primary);
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
+/* === HEADER === */
+.navbar-custom {
+  background: #0a0a0a !important;
+  border-bottom: 1px solid #0d6efd;
 }
-.navigation {
-  background-color: var(--color-accent);
-  text-align: center;
-  padding: 1rem 0;
+
+.navbar-brand {
+  color: #0d6efd !important;
+  font-weight: bold;
+  font-size: 1.4rem;
 }
-.navigation a {
+
+.nav-link {
+  color: #f1f3f5 !important;
+  margin-left: 10px;
+}
+.nav-link:hover {
+  color: #6ea8fe !important;
+}
+
+/* === SIDEBAR === */
+.sidebar-box {
+  background: #111;
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 3px solid #0d6efd;
+}
+
+.sidebar-box h5 {
+  color: #0d6efd;
+  margin-bottom: 15px;
+}
+
+.sidebar-btn {
+  width: 100%;
+  margin-bottom: 10px;
+  background: #0d6efd;
+  border: none;
   color: white;
-  margin: 0 1rem;
-  text-decoration: none;
+  padding: 8px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.sidebar-btn:hover {
+  background: #003566;
+}
+
+/* === CARDS === */
+.card-custom {
+  background: #111;
+  color: white;
+  border: 1px solid #0d6efd55;
+  transition: 0.25s;
+}
+
+.card-custom:hover {
+  transform: translateY(-4px);
+  border-color: #0d6efd;
+  box-shadow: 0 0 15px #0d6efd55;
+}
+
+.card-custom img {
+  border-bottom: 1px solid #0d6efd33;
+}
+
+/* === DESTAQUES === */
+.text-yellow {
+  color: #ffd60a !important;
   font-weight: bold;
 }
-.hero {
-  background-color: #f4f4f4;
-  text-align: center;
-  padding: 5rem 1.5rem;
+
+/* === BOTÃO DETALHES (AMARELO) === */
+.btn-warning-custom {
+  background: #ffd60a !important;
+  border: none !important;
+  color: #000 !important;
+  font-weight: bold;
 }
-.hero h2 {
-  font-size: 2.5rem;
-  color: var(--color-primary);
+
+.btn-warning-custom:hover {
+  background: #e0b800 !important;
+  color: #000 !important;
 }
-.services .service {
-  background: #e9f3fb;
-  padding: 1.5rem;
-  border-left: 5px solid var(--color-highlight);
+
+/* === BOTÕES PADRÃO === */
+.btn-primary {
+  background: #0d6efd !important;
+  border: none !important;
 }
-/* ... e assim por diante */
+
+.btn-primary:hover {
+  background: #003566 !important;
+}
+
+.btn-outline-primary {
+  border-color: #0d6efd !important;
+  color: #0d6efd !important;
+}
+
+.btn-outline-primary:hover {
+  background: #0d6efd !important;
+  color: white !important;
+}
